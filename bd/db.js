@@ -12,11 +12,12 @@ class DB{
                 database: ''
             });
             this.connection.connect((err)=>{
-                if(err){throw err}
+                if(err) throw err;
+                console.log('fallo la coneccion');
             });
             console.log('entro a conectar');
         }
-        console.log('encontro una instanciaa');
+        console.log('encontro una instancia');
         return DB.instancia;
     }
 } 
