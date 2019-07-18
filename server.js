@@ -6,10 +6,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 
-app.get('/', function(req , res) {
-    res.send('Hello World2!')
-});
-
+require('./api/router')(app);
 
 app.listen(3500, function () {
     console.log('se inició el servidor en port 3500');
