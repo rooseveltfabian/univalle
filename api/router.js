@@ -14,6 +14,10 @@ app.get('/clientes', function(req, res){
 app.get('/transacciones', function(req, res){
     TransaccionControlador.consultaTransacciones(req, res);
 });
+
+app.get('/transacciones/:tk', function(req, res){
+    TransaccionControlador.consultaTransaccion(req, res);
+});
 //Recurso raiz que me devuelve un json con la estructura de una persona
 app.get('/', function (req, res) {
     let persona = {
