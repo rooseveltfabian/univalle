@@ -7,9 +7,9 @@ class DB {
             DB.instancia = this;
             //Agregamos los parametros de conexion
             this.connection = mysql.createConnection({
-                host     : '127.0.0.1',
-                user     : 'FULLSTACK',
-                password : 'FULLSTACK',
+                host     : 'http://env-2385246.jelastic.saveincloud.net/',
+                user     : 'root',
+                password : 'REHfmy69157',
                 database : 'flexcube'
             });
             //conectamos y manejamos la conexion con throw
