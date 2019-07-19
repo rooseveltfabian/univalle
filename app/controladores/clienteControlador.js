@@ -24,6 +24,22 @@ class ClienteControlador {
                 }
             })
     }  
+
+    crearCliente(req, res){
+        let nombre = req.body.nombre;
+        let documento = req.body.documento;
+        let profesion = req.body.profesion;
+        Cliente.crearCliente(nombre, documento, profesion, (err, data)=>{
+            if(err){
+                res.send(err);
+            }else{
+                res.json({
+                    respuesta : data
+                });
+            }
+        });
+
+    }
 }
 const instanciaControlador = new ClienteControlador();
 module.exports  = instanciaControlador;

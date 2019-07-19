@@ -6,6 +6,11 @@ module.exports = (app) => {
 app.get('/clientes/:id', function(req, res) { 
     ClienteControlador.consultaCliente(req, res);
 });
+
+app.get('/create_cliente/:nombre/:documento/:profesion', function(req, res) { 
+    ClienteControlador.crearCliente(req, res);
+});
+
 //Recurso Clientes encargado de consultar todos los clientes de la base de datos
 app.get('/clientes', function(req, res){
     ClienteControlador.consultaClientes(req, res);

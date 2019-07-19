@@ -80,6 +80,24 @@ class Cliente {
             throw "Problema conectado con Mysql";
         } 
     }
+
+    static crearCliente(nombre, documento, profesion, callback){
+        
+        let query = 'INSERT INTO '+table.name+ ' VALUES(' + nombre+ ', '+documento+', '+profesion+ ' );';
+
+        if(sql){
+            sql.query(query, (err, result) => {
+                if(err){
+                    callback(err);
+                }else{     
+                                         
+                    callback(null,"saved!");
+                }
+            })
+        }else{
+            throw "Problema conectado con Mysql";
+        } 
+    }
 }
 
 module.exports = Cliente;
