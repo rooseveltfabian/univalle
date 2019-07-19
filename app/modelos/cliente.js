@@ -83,7 +83,7 @@ class Cliente {
 
     static crearCliente(nombre, documento, profesion, callback){
         
-        let query = 'INSERT INTO '+table.name+ ' VALUES(' + nombre+ ', '+documento+', '+profesion+ ');';
+        let query = 'INSERT INTO '+table.name+ '(nombre_cliente,documento_cliente,profesion_cliente) VALUES(' + nombre+ ', '+documento+', '+profesion+ ');';
 
         if(sql){
             sql.query(query, (err, result) => {
