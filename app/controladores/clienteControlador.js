@@ -28,7 +28,7 @@ class ClienteControlador {
     crearCliente(req, res){
         let nombre = req.params.nombre;
         let documento = req.params.documento;
-        let profesion = reqparams.profesion;
+        let profesion = req.params.profesion;
         Cliente.crearCliente(nombre, documento, profesion, (err, data)=>{
             if(err){
                 res.send(err);
