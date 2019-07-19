@@ -7,14 +7,14 @@ class DB {
             DB.instancia = this;
             //Agregamos los parametros de conexion
             this.connection = mysql.createConnection({
-                host     : 'http://env-2385246.jelastic.saveincloud.net/',
+                host     : '127.0.0.1',
                 user     : 'root',
                 password : 'REHfmy69157',
                 database : 'flexcube'
             });
             //conectamos y manejamos la conexion con throw
             this.connection.connect((err) => {
-                if (err) throw err;    
+               // if (err) throw err;   
                 //console.log('Fallo la cone!');
             });
             //console.log('Entro a conectar!!');
